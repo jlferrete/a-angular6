@@ -8,6 +8,7 @@
         <p *ngIf="curso.horas >= 16; else elseBlock">
             El curso dura más de dos días
         </p>
+        <button (click)="seleccion(curso)">Seleccionar</button>
     </li>
 </ul>
 <ng-template #elseBlock>El curso dura menos de dos días</ng-template>

@@ -24,4 +24,8 @@ export class AppComponent {
   ];
 
   value: number = 0;
+
+  public seleccion(curso) {
+    console.log("Ha seleccionado el curso:", curso.titulo);
+  }
 }
