@@ -4,9 +4,13 @@
 
 <ul>
     <li *ngFor="let curso of cursos">
-        <span *ngIf="curso.titulo != 'Java'">{{ curso.titulo }}</span>
+        <p>{{ curso.titulo }}</p>
+        <p *ngIf="curso.horas >= 16; else elseBlock">
+            El curso dura más de dos días
+        </p>
     </li>
 </ul>
+<ng-template #elseBlock>El curso dura menos de dos días</ng-template>
 
 <button (click)="saludar()">Saludar!</button>
 
