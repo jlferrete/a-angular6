@@ -12,7 +12,28 @@
 </ul>
 <ng-template #elseBlock>El curso dura menos de dos días</ng-template>
 
-<button (click)="saludar()">Saludar!</button>
+<!-- NGSwitch-->
+<button (click)="value = 1">Select 1</button>
+<button (click)="value = 2">Select 2</button>
+<button (click)="value = 3">Select 3</button>
+<p>Ha seleccionado el valor: {{ value }}</p>
+
+<div [ngSwitch]="value">
+    <div *ngSwitchCase="1">
+        Ha elegido el valor <b>{{ value }}</b>
+    </div>
+    <div *ngSwitchCase="2">
+        Ha elegido el valor <b>{{ value }}</b>
+    </div>
+    <div *ngSwitchCase="3">
+        Ha elegido el valor <b>{{ value }}</b>
+    </div>
+    <div *ngSwitchDefault>
+        Ha elegido el valor <b>{{ value }}</b>
+    </div>
+</div>
+
+<!-- <button (click)="saludar()">Saludar!</button> -->
 
 <app-home [entrada]="nombre"></app-home>
 <router-outlet></router-outlet>

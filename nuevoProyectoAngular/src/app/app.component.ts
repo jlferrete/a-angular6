@@ -22,4 +22,6 @@ export class AppComponent {
     { id: 3, titulo: "DevOps", horas: "24" },
     { id: 4, titulo: "Java", horas: "8" }
   ];
+
+  value: number = 0;
 }
