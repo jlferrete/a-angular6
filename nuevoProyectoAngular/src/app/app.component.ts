@@ -15,4 +15,11 @@ export class AppComponent {
   title = "Mi primera app con Angular 7";
   nombre = "Jose Luis";
   apellido = "Ferrete";
+
+  cursos = [
+    { id: 1, titulo: "Angular 7", horas: "20" },
+    { id: 2, titulo: "JavaScript", horas: "16" },
+    { id: 3, titulo: "DevOps", horas: "24" },
+    { id: 4, titulo: "Java", horas: "18" }
+  ];
 }

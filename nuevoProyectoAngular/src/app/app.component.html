@@ -2,6 +2,12 @@
 
 <h4>Mi nombre completo es: {{ nombre }} {{ apellido }}</h4>
 
+<ul>
+    <li *ngFor="let curso of cursos">
+        <span *ngIf="curso.titulo != 'Java'">{{ curso.titulo }}</span>
+    </li>
+</ul>
+
 <button (click)="saludar()">Saludar!</button>
 
 <app-home [entrada]="nombre"></app-home>
